@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug, getPostContent } from "@/lib/posts";
 
@@ -30,7 +31,7 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <div className="py-16">
-      <a
+      <Link
         href="/"
         className="mb-8 inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.2em] text-muted transition-colors hover:text-accent"
       >
@@ -38,7 +39,7 @@ export default async function PostPage({ params }: Props) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
         Home
-      </a>
+      </Link>
 
       <header className="mb-12 max-w-2xl border-b border-border pb-10">
         <p className="mb-3 font-body text-[10px] font-bold uppercase tracking-[0.3em] text-accent">
