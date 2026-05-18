@@ -40,7 +40,7 @@ const categoryHrefs: Record<string, string> = {
 
 interface CreditRowProps {
   label: string;
-  value: string;
+  value: string | undefined;
 }
 
 function CreditRow({ label, value }: CreditRowProps) {
