@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm --version)",
+      "Bash(ls /pkg/env/global/bin/ | grep -E \"node|npm|npx\" 2>/dev/null; ls /opt/homebrew/bin/ | grep -E \"^node|^npm|^npx\" 2>/dev/null)",
+      "Bash(ls /opt/homebrew/opt/ | grep node)",
+      "WebFetch(domain:www.youtube.com)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(mkdir -p /Users/the2ndact/Documents/Code/WaxIdioticalDotCom/src/app/news/\\\\[slug\\\\])",
+      "WebFetch(domain:the2ndact.notion.site)"
+    ]
+  }
+}
