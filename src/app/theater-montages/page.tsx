@@ -3,7 +3,7 @@ import { getFilmsByCategory } from "@/lib/films";
 import FilmGrid from "@/components/FilmGrid";
 
 export const metadata: Metadata = {
-  title: "Theater Montages",
+  title: "Theater Promos",
   description: "Highlights and montages from theatrical productions.",
 };
 
@@ -17,7 +17,7 @@ export default function TheaterMontagesPage() {
           Category
         </p>
         <h1 className="font-display text-6xl leading-none tracking-widest text-foreground md:text-8xl">
-          Theater Montages
+          Theater Promos
         </h1>
         <p className="mt-4 max-w-lg font-body text-base text-muted">
           Highlights from theatrical productions.

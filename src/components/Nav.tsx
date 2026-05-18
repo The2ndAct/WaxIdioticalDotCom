@@ -8,11 +8,11 @@ import clsx from "clsx";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/48-hour-films", label: "48 Hour Films" },
-  { href: "/theater-montages", label: "Theater Montages" },
-  { href: "/latest", label: "Latest" },
-  { href: "/other", label: "Other" },
   { href: "/news", label: "News" },
+  { href: "/48-hour-films", label: "48 Hour Films" },
+  { href: "/theater-montages", label: "Theater Promos" },
+  { href: "/other", label: "Other" },
+  { href: "/about", label: "About Us" },
 ];
 
 export default function Nav() {

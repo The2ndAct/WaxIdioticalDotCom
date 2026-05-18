@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const categoryLabels: Record<string, string> = {
   "48-hour-films": "48 Hour Films",
-  "theater-montages": "Theater Montages",
+  "theater-montages": "Theater Promos",
   other: "Other",
 };
 
@@ -160,6 +160,20 @@ export default async function FilmPage({ params }: Props) {
                 {tag}
               </span>
             ))}
+          </div>
+        )}
+
+        {film.extras && film.extras.length > 0 && (
+          <div className="mt-10 border-t border-border pt-8">
+            <h2 className="mb-6 font-display text-2xl tracking-wide text-foreground">Extras</h2>
+            <div className="flex flex-col gap-10">
+              {film.extras.map((extra) => (
+                <div key={extra.youtubeId}>
+                  <p className="mb-3 font-body text-sm uppercase tracking-widest text-muted">{extra.title}</p>
+                  <YouTubeEmbed youtubeId={extra.youtubeId} title={extra.title} />
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>

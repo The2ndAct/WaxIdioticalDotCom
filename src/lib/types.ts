@@ -21,6 +21,7 @@ export interface Film {
   otherCrew?: string;
   elements?: string[];
   awards?: string[];
+  extras?: { title: string; youtubeId: string }[];
 }
 
 export interface Post {

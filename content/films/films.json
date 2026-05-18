@@ -709,6 +709,9 @@
     "description": "A Wax Idiotical 48 Hour Film.",
     "date": "2016-07-01",
     "tags": [],
+    "extras": [
+      { "title": "Bloopers", "youtubeId": "3Jk_fmsnSbw" }
+    ],
     "genre": "Time Travel",
     "cityEvent": "Providence",
     "directedBy": "Kyp Pilalas, Mark Marshall",
@@ -1148,6 +1151,9 @@
     "shotBy": "Ben Bagley, Kyp Pilalas, Mark Marshall",
     "cast": "Ben Bagley, Fabulous Tustin, Kyp Pilalas, Mark Marshall",
     "originalScore": "Ryan Blake",
+    "extras": [
+      { "title": "Bloopers", "youtubeId": "lkJm3-kIVAY" }
+    ],
     "elements": [
       "Character: Trish or Trevor Gofursh, Planner",
       "Prop: Sunglasses",
@@ -1434,6 +1440,60 @@
     "category": "theater-montages",
     "description": "Humor and History collide in a debate of national proportions.",
     "date": "2026-02-06",
+    "tags": []
+  },
+  {
+    "slug": "science-friday",
+    "title": "Science Friday",
+    "youtubeId": "O1udhjJMZCU",
+    "category": "other",
+    "description": "A Wax Idiotical short film.",
+    "date": "2013-12-21",
+    "tags": []
+  },
+  {
+    "slug": "rejected-doritos-commercial",
+    "title": "Rejected Doritos Commercial",
+    "youtubeId": "1E48OB8NOWg",
+    "category": "other",
+    "description": "A Wax Idiotical short film.",
+    "date": "2013-12-20",
+    "tags": []
+  },
+  {
+    "slug": "the-story-of-gladys",
+    "title": "The Story of Gladys",
+    "youtubeId": "EoRwZ6qrWyo",
+    "category": "other",
+    "description": "A Wax Idiotical short film.",
+    "date": "2010-01-31",
+    "tags": []
+  },
+  {
+    "slug": "lloyd-handsom-werewolf-hunter",
+    "title": "Lloyd Handsom Werewolf Hunter",
+    "youtubeId": "f43kTnHkN20",
+    "category": "other",
+    "description": "A Wax Idiotical short film.",
+    "date": "2002-06-01",
+    "tags": []
+  },
+  {
+    "slug": "boston-local-pilot",
+    "title": "Boston Local — Pilot",
+    "youtubeId": "6q6ImQB2IDY",
+    "category": "other",
+    "description": "Pilot episode for the web show Boston Local.",
+    "date": "2017-10-31",
+    "tags": []
+  },
+  {
+    "slug": "boston-48hfp-hall-of-fame-reel",
+    "title": "Boston 48HFP Hall of Fame Reel",
+    "youtubeId": "mfECPxMMTy0",
+    "category": "other",
+    "description": "A highlight reel celebrating Wax Idiotical's induction into the Boston 48 Hour Film Project Hall of Fame.",
+    "date": "2021-05-30",
     "tags": []
   },
   {

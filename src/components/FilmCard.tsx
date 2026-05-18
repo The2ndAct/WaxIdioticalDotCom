@@ -3,7 +3,7 @@ import type { Film } from "@/lib/types";
 
 const categoryLabels: Record<Film["category"], string> = {
   "48-hour-films": "48HFP",
-  "theater-montages": "Theater",
+  "theater-montages": "Promo",
   other: "Other",
 };
 

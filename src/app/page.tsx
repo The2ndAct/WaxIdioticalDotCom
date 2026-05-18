@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { getFeedEntries } from "@/lib/feed";
+import { getAllFilms } from "@/lib/films";
 import FeedList from "@/components/FeedList";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 export const metadata: Metadata = {
   title: "WaxIdiotical",
@@ -9,6 +11,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const entries = getFeedEntries();
+  const latestFilm = getAllFilms()[0];
 
   return (
     <div>
@@ -22,6 +25,22 @@ export default function HomePage() {
           Wax Idiotical
         </h1>
       </section>
+
+      {/* Latest Film */}
+      {latestFilm && (
+        <section className="border-b border-border py-16">
+          <div className="mb-6 flex items-center gap-4">
+            <h2 className="font-display text-xl tracking-[0.2em] text-accent">
+              Latest
+            </h2>
+            <div className="h-px flex-1 bg-border" />
+          </div>
+          <h3 className="mb-6 font-display text-4xl leading-none tracking-wide text-foreground md:text-6xl">
+            {latestFilm.title}
+          </h3>
+          <YouTubeEmbed youtubeId={latestFilm.youtubeId} title={latestFilm.title} />
+        </section>
+      )}
 
       {/* Feed */}
       <section className="py-16">
