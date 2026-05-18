@@ -33,6 +33,18 @@ export default function AboutPage() {
         <p>
           We're still making things. We're still doing it in a hurry.
         </p>
+
+        <div className="border-t border-border pt-8">
+          <p>
+            Questions, comments, criticisms? Email me at{" "}
+            <a
+              href="mailto:kyp@waxidiotical.com"
+              className="text-accent transition-colors hover:text-foreground"
+            >
+              kyp@waxidiotical.com
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );
