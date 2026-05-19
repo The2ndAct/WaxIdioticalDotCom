@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Film } from "@/lib/types";
 
 const categoryLabels: Record<Film["category"], string> = {
@@ -12,7 +13,8 @@ interface Props {
 }
 
 export default function FilmCard({ film }: Props) {
-  const thumb = `https://img.youtube.com/vi/${film.youtubeId}/maxresdefault.jpg`;
+  const thumb = film.thumbnailUrl
+    ?? (film.youtubeId ? `https://img.youtube.com/vi/${film.youtubeId}/maxresdefault.jpg` : null);
 
   return (
     <Link
@@ -21,12 +23,24 @@ export default function FilmCard({ film }: Props) {
     >
       {/* Thumbnail */}
       <div className="relative aspect-video overflow-hidden bg-black">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={thumb}
-          alt={film.title}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+        {thumb ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={thumb}
+            alt={film.title}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center bg-surface">
+            <Image
+              src="/logo.png"
+              alt="Wax Idiotical"
+              width={80}
+              height={80}
+              className="opacity-30"
+            />
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
         {/* Play icon */}

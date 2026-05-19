@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllFilms, getFilmBySlug } from "@/lib/films";
-import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoEmbed from "@/components/VideoEmbed";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -105,7 +105,7 @@ export default async function FilmPage({ params }: Props) {
 
       {/* Embed */}
       <div className="mx-auto max-w-4xl">
-        <YouTubeEmbed youtubeId={film.youtubeId} title={film.title} />
+        <VideoEmbed youtubeId={film.youtubeId} vimeoId={film.vimeoId} title={film.title} />
       </div>
 
       {/* Description + Credits */}
@@ -168,9 +168,9 @@ export default async function FilmPage({ params }: Props) {
             <h2 className="mb-6 font-display text-2xl tracking-wide text-foreground">Extras</h2>
             <div className="flex flex-col gap-10">
               {film.extras.map((extra) => (
-                <div key={extra.youtubeId}>
+                <div key={extra.title}>
                   <p className="mb-3 font-body text-sm uppercase tracking-widest text-muted">{extra.title}</p>
-                  <YouTubeEmbed youtubeId={extra.youtubeId} title={extra.title} />
+                  <VideoEmbed youtubeId={extra.youtubeId} vimeoId={extra.vimeoId} title={extra.title} />
                 </div>
               ))}
             </div>

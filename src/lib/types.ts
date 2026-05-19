@@ -3,7 +3,9 @@ export type FilmCategory = "48-hour-films" | "theater-montages" | "other";
 export interface Film {
   slug: string;
   title: string;
-  youtubeId: string;
+  youtubeId?: string;
+  vimeoId?: string;
+  thumbnailUrl?: string;
   category: FilmCategory;
   description: string;
   date: string;
@@ -21,7 +23,7 @@ export interface Film {
   otherCrew?: string;
   elements?: string[];
   awards?: string[];
-  extras?: { title: string; youtubeId: string }[];
+  extras?: { title: string; youtubeId?: string; vimeoId?: string }[];
 }
 
 export interface Post {

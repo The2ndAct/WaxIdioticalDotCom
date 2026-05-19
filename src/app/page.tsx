@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getFeedEntries } from "@/lib/feed";
 import { getAllFilms } from "@/lib/films";
 import FeedList from "@/components/FeedList";
-import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoEmbed from "@/components/VideoEmbed";
 
 export const metadata: Metadata = {
   title: "WaxIdiotical",
@@ -38,7 +38,7 @@ export default function HomePage() {
           <h3 className="mb-6 font-display text-4xl leading-none tracking-wide text-foreground md:text-6xl">
             {latestFilm.title}
           </h3>
-          <YouTubeEmbed youtubeId={latestFilm.youtubeId} title={latestFilm.title} />
+          <VideoEmbed youtubeId={latestFilm.youtubeId} vimeoId={latestFilm.vimeoId} title={latestFilm.title} />
         </section>
       )}
 
