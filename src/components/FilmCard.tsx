@@ -31,13 +31,12 @@ export default function FilmCard({ film }: Props) {
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center bg-surface">
+          <div className="absolute inset-0 bg-surface">
             <Image
               src="/logo.png"
               alt="Wax Idiotical"
-              width={80}
-              height={80}
-              className="opacity-30"
+              fill
+              className="object-contain opacity-20 -translate-x-6 translate-y-8"
             />
           </div>
         )}
