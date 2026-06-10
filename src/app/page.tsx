@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getFeedEntries } from "@/lib/feed";
-import { getAllFilms } from "@/lib/films";
+import { getFilmsByCategory } from "@/lib/films";
 import FeedList from "@/components/FeedList";
 import VideoEmbed from "@/components/VideoEmbed";
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const entries = getFeedEntries();
-  const latestFilm = getAllFilms()[0];
+  const latestFilm = getFilmsByCategory("48-hour-films")[0];
 
   return (
     <div>
