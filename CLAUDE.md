@@ -128,6 +128,10 @@ interface Film {
 }
 ```
 
+## Home page "Latest" section
+
+The featured embed at the top of the home page (`src/app/page.tsx`) always shows the most recent **48-hour film** (`getFilmsByCategory("48-hour-films")[0]`), not the most recent film across all categories. This is intentional — adding a theater promo should not displace the featured 48HFP film.
+
 ## Key gotchas
 
 - **zsh glob expansion**: always quote paths containing `[slug]` in shell commands: `git add 'src/app/films/[slug]/page.tsx'`
