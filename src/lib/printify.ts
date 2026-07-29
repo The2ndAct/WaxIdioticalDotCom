@@ -4,6 +4,7 @@ export interface PrintifyProduct {
   description: string;
   images: { src: string; is_default: boolean }[];
   variants: { price: number; is_enabled: boolean }[];
+  external?: { id: string; handle: string };
 }
 
 const SHOP_ID = "28410449";
@@ -26,8 +27,8 @@ export async function getProducts(): Promise<PrintifyProduct[]> {
   return data.data as PrintifyProduct[];
 }
 
-export function getProductUrl(productId: string): string {
-  return `${STOREFRONT}/product/${productId}`;
+export function getProductUrl(product: PrintifyProduct): string {
+  return product.external?.handle ?? STOREFRONT;
 }
 
 export function getMinPrice(product: PrintifyProduct): number {

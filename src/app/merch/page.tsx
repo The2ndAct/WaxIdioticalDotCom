@@ -26,7 +26,7 @@ export default async function MerchPage() {
           {products.map((product) => {
             const image = getDefaultImage(product);
             const minPrice = getMinPrice(product);
-            const url = getProductUrl(product.id);
+            const url = getProductUrl(product);
 
             return (
               <a
