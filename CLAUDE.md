@@ -95,6 +95,7 @@ Set `vimeoId` instead of (or in addition to) `youtubeId`. Vimeo has no predictab
 { href: "/48-hour-films", label: "48 Hour Films" },
 { href: "/theater-montages", label: "Theater Promos" },
 { href: "/other", label: "Other" },
+{ href: "/merch", label: "Merch" },
 { href: "/about", label: "About Us" },
 ```
 
